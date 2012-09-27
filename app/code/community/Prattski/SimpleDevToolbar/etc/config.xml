@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Prattski - Simple Developer Toolbar
+ *
+ * @category    Prattski
+ * @package     Prattski_SimpleDevToolbar
+ * @copyright   Copyright (c) 2012 Prattski (http://prattski.com)
+ * @author      Josh Pratt (josh@prattski.com)
+ */
+-->
+<config>
+    <modules>
+        <Prattski_SimpleDevToolbar>
+            <version>1.0.0</version>
+        </Prattski_SimpleDevToolbar>
+    </modules>
+    <global>
+        <models>
+            <prattski_simpledevtoolbar>
+                <class>Prattski_SimpleDevToolbar_Model</class>
+            </prattski_simpledevtoolbar>
+        </models>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <add_prattski_simple_developer_toolbar>
+                        <type>singleton</type>
+                        <class>prattski_simpledevtoolbar/observer</class>
+                        <method>addDevToolbar</method>
+                    </add_prattski_simple_developer_toolbar>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+    </global>
+    <frontend>
+        <routers>
+            <prattski_simpledevtoolbar>
+                <use>standard</use>
+                <args>
+                    <module>Prattski_SimpleDevToolbar</module>
+                    <frontName>simpledevtoolbar</frontName>
+                </args>
+            </prattski_simpledevtoolbar>
+        </routers>
+    </frontend>
+    <admin>
+        <routers>
+            <prattski_simpledevtoolbar>
+                <use>admin</use>
+                <args>
+                    <module>Prattski_SimpleDevToolbar</module>
+                    <frontName>simpledevtoolbar</frontName>
+                </args>
+            </prattski_simpledevtoolbar>
+        </routers>
+    </admin>
+</config>

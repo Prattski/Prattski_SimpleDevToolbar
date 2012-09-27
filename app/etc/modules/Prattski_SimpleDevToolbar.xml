@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Prattski - Simple Developer Toolbar
+ *
+ * @category    Prattski
+ * @package     Prattski_SimpleDevToolbar
+ * @copyright   Copyright (c) 2012 Prattski (http://prattski.com)
+ * @author      Josh Pratt (josh@prattski.com)
+ */
+-->
+<config>
+    <modules>
+        <Prattski_SimpleDevToolbar>
+            <codePool>community</codePool>
+            <active>true</active>
+        </Prattski_SimpleDevToolbar>
+    </modules>
+</config>
