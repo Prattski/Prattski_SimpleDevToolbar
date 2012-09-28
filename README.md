@@ -13,3 +13,8 @@ It currently does the following:
 * Toggle all cache types
 * Flush cache if enabled
 * Mark all unread admin notifications as read
+
+
+<img src="http://prattski.com/wp-content/uploads/2012/09/devtoolbar-frontend1.png" alt="" title="Magento Developer Toolbar - Frontend" />
+
+<img src="http://prattski.com/wp-content/uploads/2012/09/devtoolbar-admin1.png" alt="" title="Magento Developer Toolbar - Admin" />
