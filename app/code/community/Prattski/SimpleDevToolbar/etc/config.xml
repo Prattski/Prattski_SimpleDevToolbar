@@ -58,7 +58,7 @@
     <default>
         <dev>
             <prattski>
-                <show_simpledevtoolbar>1</show_simpledevtoolbar>
+                <simpledevtoolbar_enabled>1</simpledevtoolbar_enabled>
             </prattski>
         </dev>
     </default>

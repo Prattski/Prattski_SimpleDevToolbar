@@ -30,7 +30,7 @@ class Prattski_SimpleDevToolbar_Model_Observer
          * 
          * System Config > Developer > Prattski Developer Tools 
          */
-        if (!Mage::getStoreConfig('dev/prattski/simpledevtoolbar_show') || !$this->_canViewToolbar()) {
+        if (!Mage::getStoreConfig('dev/prattski/simpledevtoolbar_enabled') || !$this->_canViewToolbar()) {
             return;
         }
         
