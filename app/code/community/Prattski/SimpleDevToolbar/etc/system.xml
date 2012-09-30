@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Prattski - Simple Developer Toolbar
+ *
+ * @category    Prattski
+ * @package     Prattski_SimpleDevToolbar
+ * @copyright   Copyright (c) 2012 Prattski (http://prattski.com)
+ * @author      Josh Pratt (josh@prattski.com)
+ */
+-->
+<config>
+    <sections>
+        <dev>
+            <groups>
+                <prattski>
+                    <label>Prattski Developer Tools</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>25</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <simpledevtoolbar_show>
+                            <label>Show Dev Toolbar</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </simpledevtoolbar_show>
+                        <simpledevtoolbar_restrict>
+                            <label>Restrict Toolbar to IPs</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Comma-separated IP addresses. Leave blank to display toolbar to everyone.</comment>
+                        </simpledevtoolbar_restrict>
+                    </fields>
+                </prattski>
+            </groups>
+        </dev>
+    </sections>
+</config>

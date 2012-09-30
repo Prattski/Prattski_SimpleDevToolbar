@@ -24,6 +24,16 @@ class Prattski_SimpleDevToolbar_Model_Observer
      */
     public function addDevToolbar(Varien_Event_Observer $observer)
     {
+        /**
+         * If set to not display the toolbar, don't build it, or if this display
+         * is restricted to 1+ IP addresses, do not render teh toolbar.
+         * 
+         * System Config > Developer > Prattski Developer Tools 
+         */
+        if (!Mage::getStoreConfig('dev/prattski/simpledevtoolbar_show') || !$this->_canViewToolbar()) {
+            return;
+        }
+        
         // Get the block object from the observer
         $block = $observer->getBlock();
         
@@ -41,6 +51,11 @@ class Prattski_SimpleDevToolbar_Model_Observer
         }
     }
     
+    /**
+     * Build the toolbar html code
+     * 
+     * @return string   html
+     */
     protected function _getToolbarHtml()
     {
         $html = '<div style="width: 100%; padding: 5px; border: 1px solid #333; background-color: #ccc; text-align: center">';
@@ -151,5 +166,34 @@ class Prattski_SimpleDevToolbar_Model_Observer
         }
         
         return false;
+    }
+    
+    /**
+     * If there are any IP addresses in the restrict field, only display the
+     * toolbar to those users.
+     * 
+     * @return boolean 
+     */
+    protected function _canViewToolbar()
+    {
+        // Preset to true
+        $allow = true;
+
+        // Get the restricted IPs field
+        $allowedIps = Mage::getStoreConfig('dev/prattski/simpledevtoolbar_restrict');
+        
+        // Get the user's remote address
+        $remoteAddr = Mage::helper('core/http')->getRemoteAddr();
+        
+        // Run lookup as long as there are any IP addresses in the restrict field
+        if (!empty($allowedIps) && !empty($remoteAddr)) {
+            $allowedIps = preg_split('#\s*,\s*#', $allowedIps, null, PREG_SPLIT_NO_EMPTY);
+            if (array_search($remoteAddr, $allowedIps) === false
+                && array_search(Mage::helper('core/http')->getHttpHost(), $allowedIps) === false) {
+                $allow = false;
+            }
+        }
+
+        return $allow;
     }
 }

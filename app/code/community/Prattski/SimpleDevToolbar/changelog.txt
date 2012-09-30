@@ -1,0 +1,22 @@
+/**
+ * Prattski - Simple Developer Toolbar
+ *
+ * @category    Prattski
+ * @package     Prattski_SimpleDevToolbar
+ * @copyright   Copyright (c) 2012 Prattski (http://prattski.com)
+ * @author      Josh Pratt (josh@prattski.com)
+ */
+
+
+Change Log:
+
+1.1.0 (09/30/2012)
+
+ - Added ability to show/not show the toolbar from the system config
+ - Added ability to restrict showing of the toolbar to specified IP addresses
+
+--------------------------------------------------------------------------------
+
+1.0.0 (09/27/2012)
+
+ - Initial version of the module

@@ -12,7 +12,7 @@
 <config>
     <modules>
         <Prattski_SimpleDevToolbar>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </Prattski_SimpleDevToolbar>
     </modules>
     <global>
@@ -55,4 +55,11 @@
             </prattski_simpledevtoolbar>
         </routers>
     </admin>
+    <default>
+        <dev>
+            <prattski>
+                <show_simpledevtoolbar>1</show_simpledevtoolbar>
+            </prattski>
+        </dev>
+    </default>
 </config>
