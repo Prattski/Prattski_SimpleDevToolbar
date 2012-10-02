@@ -23,3 +23,24 @@ IPs" field.
 <img src="http://prattski.com/wp-content/uploads/2012/09/devtoolbar-frontend1.png" alt="" title="Magento Developer Toolbar - Frontend" />
 
 <img src="http://prattski.com/wp-content/uploads/2012/09/devtoolbar-admin1.png" alt="" title="Magento Developer Toolbar - Admin" />
+
+
+## Installation
+
+### Downloading ###
+
+If you want to download the files and install yourself, you can go to the "Downloads"
+link in this repository and download the files manually.  The folder structure in the
+repository directly mirrors where the files should go in Magento.
+
+### Modman ###
+
+If you have installed Modman on your machine, downloading and installing is very easy.
+In your terminal, go to your Magento root directory and do the following:
+```
+$ modman init            # This is only done once in the application root
+$ modman clone git@github.com:Prattski/Prattski_SimpleDevToolbar.git
+```
+
+If you don't have/use Modman and you want to check it out, 
+<a href="https://github.com/colinmollenhour">visit the modman github page</a>.
