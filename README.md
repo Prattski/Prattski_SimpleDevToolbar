@@ -39,7 +39,7 @@ If you have installed Modman on your machine, downloading and installing is very
 In your terminal, go to your Magento root directory and do the following:
 ```
 $ modman init            # This is only done once in the application root
-$ modman clone git@github.com:Prattski/Prattski_SimpleDevToolbar.git
+$ modman clone git://github.com/Prattski/Prattski_SimpleDevToolbar.git
 ```
 
 If you don't have/use Modman and you want to check it out, 
