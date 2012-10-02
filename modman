@@ -1,0 +1,4 @@
+# Directives for installing with modman - https://github.com/colinmollenhour/modman
+
+app/code/community/Prattski/SimpleDevToolbar app/code/community/Prattski/SimpleDevToolbar
+app/etc/modules/* app/etc/modules/
